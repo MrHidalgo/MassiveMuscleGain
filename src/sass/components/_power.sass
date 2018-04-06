@@ -74,10 +74,13 @@
     position: absolute
     top: 0
     width: 100%
-    min-height: 500px
+    min-height: 480px
     padding: 20px 10px 0
     background-color: $colorWhiteSmoke
-    border: 8px solid $colorNobel
+    border:
+      top: 8px solid $colorNobel
+      left: 8px solid $colorNobel
+      right: 8px solid $colorNobel
     +rmin(768)
       left: auto
       right: 0
@@ -85,6 +88,46 @@
     +rmin(992)
       left: 0
       max-width: 520px
+
+    &-line
+      &--left,
+      &--right
+        z-index: 2
+        position: absolute
+        bottom: -36px
+        width: calc(50% + 17px)
+        height: 8px
+        background-color: $colorNobel
+
+      &--left
+        left: -11px
+        transform: rotate(15deg)
+
+      &--right
+        right: -11px
+        transform: rotate(-15deg)
+
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+
+    &:before
+      bottom: -70px
+      right: -8px
+      width: 0
+      height: 0
+      border-top: 70px solid #f4f4f4
+      border-right: 260px solid transparent
+
+    &:after
+      bottom: -70px
+      left: -8px
+      width: 0
+      height: 0
+      border-top: 70px solid #f4f4f4
+      border-left: 260px solid transparent
+
 
     &-title,
     &-subtitle
