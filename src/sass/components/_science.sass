@@ -1,0 +1,80 @@
+.science
+  min-height: 660px
+  padding-top: 47px
+  background-color: $colorWhite
+  background-image: url("../img/img-bg__science.png")
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  background-attachment: fixed
+
+
+  &__block
+    width: 100%
+    max-width: 50%
+
+
+  &__title
+    line-height: 1
+    font-family: 'SuiGeneris', sans-serif
+    color: $colorNightRider
+    +rmin(768)
+      font-size: 50px
+    +rmin(992)
+      font-size: 55px
+    +rmin(1200)
+      font-size: 60px
+
+
+  &__subtitle
+    line-height: 1
+    margin-bottom: 25px
+    font-family: 'SuiGeneris', sans-serif
+    color: $colorBlack
+    +rmin(768)
+      font-size: 30px
+    +rmin(992)
+      font-size: 34px
+    +rmin(1200)
+      font-size: 38px
+
+
+  &__text
+    font-size: 14px
+    font-weight: 600
+    color: $colorBlack
+
+    &-0
+      margin-bottom: 30px
+
+    &-1
+      margin-bottom: 50px
+
+
+  &__list
+    font-family: 'Rift', sans-serif
+    font-weight: 600
+    margin-bottom: 30px
+    +rmin(768)
+      font-size: 21px
+    +rmin(992)
+      font-size: 24px
+    +rmin(1200)
+      font-size: 27px
+
+    &-wrap
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      height: 37px
+      transform: skew(-30deg)
+
+      &--red
+        background-color: $colorVenetianRed
+      &--black
+        background-color: $colorBlack
+
+      span
+        transform: skew(30deg)
+

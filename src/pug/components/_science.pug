@@ -1,0 +1,29 @@
+// SCIENCE :: START
+-
+  var scienceArrTitle = [
+    "UNBELIEVABLE MUSCLE STRENGTH",
+    "IMPRESSIVE MUSCLE ENDURANCE",
+    "SUPERB MUSCLE RECOVERY",
+    "MASSIVE MUSCLE GAIN",
+    "MAXIMUM WORKOUT PERFORMANCE"
+  ];
+
+
+
+.science
+  .container
+
+    .science__block
+
+      p.science__title!= "THE SCIENCE"
+      p.science__subtitle!= "BEHIND MASSGENIX"
+
+      p.science__text.science__text-0!= "At this day and age, being able to do a regular, full workout is a luxury, and getting the body you’ve always wanted becomes more difficult day by day. An average person who works out would only have roughly 1 hour every week to work out, and that’s not nearly enough to transform your body, no matter how hard you push your body."
+      p.science__text.science__text-1!= "Our solution? Work out smarter, not harder. Maximize your performance and push your body to the limits, and make the most out of your time at the gym. MASSGENIX is a PREMIUM MUSCLE-BUILDING SUPPLEMENT that allows you to maximize your workout performance to transform your body like you’ve never seen before."
+
+      .science__list
+        -for(var i = 0, len = scienceArrTitle.length; i < len; i++)
+          div(class="science__list-wrap " + ((i % 2 === 0) ? "science__list-wrap--red" : "science__list-wrap--black"))
+            span!= scienceArrTitle[i]
+        
+// SCIENCE :: END
