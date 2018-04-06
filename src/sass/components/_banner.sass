@@ -24,7 +24,6 @@
   &__subtitle,
   &__text
     font-family: 'SuiGeneris', sans-serif
-    line-height: 1
 
     g
       transform: translate(100%)
@@ -33,12 +32,12 @@
       text-anchor: end
 
 
-  &__title
-    font-size: 114px
-  &__subtitle
-    font-size: 80px
-  &__text
-    font-size: 24px
+  //&__title
+  //  font-size: 114px
+  //&__subtitle
+  //  font-size: 80px
+  //&__text
+  //  font-size: 24px
 
   &__img
     max-width: 100%
@@ -222,6 +221,7 @@
         weight: bold
       color: $colorWhite
       text-align: center
+      +transition(background)
 
     &-img
       &-wrap

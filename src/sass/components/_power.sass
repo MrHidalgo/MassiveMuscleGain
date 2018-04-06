@@ -284,32 +284,28 @@
 
 
     &-text
-      position: relative
       z-index: 6
+      position: relative
+      margin-bottom: 10px
       text-align: center
       font-family: 'SuiGeneris', sans-serif
-      +rmin(768)
-        font-size: 22px
-      +rmin(992)
-        font-size: 28px
-      +rmin(1200)
-        font-size: 34px
+
+      &:nth-child(4)
+        margin-bottom: 0
+
 
       &--big
         +rmin(768)
           margin-bottom: 28px
-          font-size: 50px
         +rmin(992)
           margin-bottom: 40px
-          font-size: 60px
         +rmin(1200)
           margin-bottom: 50px
-          font-size: 70px
+
 
       svg
         g
           transform: translate(50%)
-
         text
           text-anchor: middle
 

@@ -25,7 +25,7 @@
   .container
 
 
-    svg(height="60px" width="100%" class="works__title")
+    svg(viewBox='0 0 1110 60' xmlns='http://www.w3.org/2000/svg' version='1.1' class="works__title")
       defs
         linearGradient(id="gradientTextTitle" x1="0%" y1="0%" x2="0%" y2="100%")
           stop(offset="0%" stop-color="#C7C7C7")
@@ -33,15 +33,17 @@
       g()
         text(
           style="stroke:#000; stroke-width: 10px"
-          x="0" y="50"
+          x="0" y="55"
+          font-size="60px"
           )!= "MASSIVE MUSCLE GAIN"
         text(
           fill="url(#gradientTextTitle)"
-          x="0" y="50"
+          x="0" y="55"
+          font-size="60px"
           )!= "MASSIVE MUSCLE GAIN"
 
 
-    svg(height="48px" width="100%" class="works__subtitle")
+    svg(viewBox='0 0 1110 40' xmlns='http://www.w3.org/2000/svg' version='1.1' class="works__subtitle")
       defs
         linearGradient(id="gradientTextSubtitle" x1="0%" y1="0%" x2="0%" y2="100%")
           stop(offset="0%" stop-color="#fff")
@@ -49,12 +51,14 @@
       g()
         text(
           style="stroke:#000; stroke-width: 10px"
-          x="0" y="38"
+          x="0" y="35"
+          font-size="38px"
         )!= "MAXIMUM WORKOUT PERFORMANCE"
         text(
           fill="url(#gradientTextSubtitle)"
-          x="0" y="38"
-          )!= "MAXIMUM WORKOUT PERFORMANCE"
+          x="0" y="35"
+          font-size="38px"
+        )!= "MAXIMUM WORKOUT PERFORMANCE"
 
 
     p.works__text!= "HOW MASSGENIX WORKS"
