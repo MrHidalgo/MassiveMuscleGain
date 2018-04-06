@@ -1,9 +1,71 @@
 // FOOTER :: START
 
+-
+  var footerLink = [
+    "© 2017 Massgenix",
+    "Terms & Conditions",
+    "Privacy Policy",
+    "Contact Us ",
+    "Customer Service: <a href='tel:8556000119' title=''>855-600-0119</a>"
+  ];
+  var footerSocialLink = [
+    "facebook",
+    "twitter",
+    "youtube",
+    "google"
+  ];
+
 
 footer.footer
   .container
     .footer__wrapper
-      
-      
+
+
+      .footer__top
+
+        ul.footer__list
+          -for(var i = 0, len = footerLink.length; i < len; i++)
+            li.footer__list-item
+              if(i === 0 || (i === len - 1))
+                p!= footerLink[i]
+              else
+                a(href="#")!= footerLink[i]
+
+            if(i === 0 || (i !== len - 1))
+              li.footer__list-item.footer__list-item--empty!= "|"
+
+
+      .footer__middle
+
+        .footer__soc
+          .footer__soc-container
+            .footer__soc-row
+              -for(var i = 0, len = footerSocialLink.length; i < len; i++)
+                a(href="#" title="")
+                  +icon("ico-" + footerSocialLink[i])
+
+            .footer__soc-row--empty
+
+            .footer__soc-row
+              img(src="./img/img-fedex__footer.png" title="" alt="")
+              img(src="./img/img-ups__footer.png" title="" alt="")
+              img(src="./img/img-us__footer.png" title="" alt="")
+
+            .footer__soc-row--empty
+
+            .footer__soc-row
+              img(src="./img/img-visa__footer.png" title="" alt="")
+              img(src="./img/img-mc__footer.png" title="" alt="")
+
+            .footer__soc-row--empty
+
+            .footer__soc-row
+              img(src="./img/img-as__footer.png" title="" alt="")
+              img(src="./img/img-dmca__footer.png" title="" alt="")
+              img(src="./img/img-comodo__footer.png" title="" alt="")
+
+
+      .footer__bottom
+        p!= "*Representations regarding the efficacy and safety of Testo Blend have not been scientifically substantiated or evaluated by the Food and Drug Administration. Our products are not intended to diagnose, cure or prevent any disease. The information provided by this website or this company is not a substitute for a face-to-face consultation with your physician, and should not be construed as individual medical advice and/or health related advice. The testimonials on this website are individual cases and do not guarantee that you will get the same results. This product is not for use by or sale to persons under the age of 18. This product should be used only as directed on the label and after consulting with your personal physician. This product should not be used if you are pregnant or nursing, you should consult with your physician to determine any risk associated with taking this product. Consult with a physician before use if you have a serious medical condition or use prescription medications. A Doctor's advice should be sought before using this and any supplemental dietary product. Individual results will vary.*Representations regarding the efficacy and safety of Testo Blend have not been scientifically substantiated or evaluated by the Food and Drug Administration. Our products are not intended to diagnose, cure or prevent any disease. The information provided by this website or this company is not a substitute for a face-to-face consultation with your physician, and should not be construed as individual medical advice and/or health related advice. The testimonials on this website are individual cases and do not guarantee that you will get the same results. This product is not for use by or sale to persons under the age of 18. This product should be used only as directed on the label and after consulting with your personal physician. This product should not be used if you are pregnant or nursing, you should consult with your physician to determine any risk associated with taking this product. Consult with a physician before use if you have a serious medical condition or use prescription medications. A Doctor's advice should be sought before using this and any supplemental dietary product. Individual results will vary."
+
 // FOOTER :: END
