@@ -1,0 +1,154 @@
+// POWER :: START
+-
+  var powerBoxListTitle = [
+    "MUSCLE WEAKNESS",
+    "MUSCLE CATABOLISM",
+    "FATIGUE",
+    "LETHARGY",
+    "WEIGHT GAIN"
+  ];
+  var powerBoxListSubTitle = [
+    "",
+    "(SHRINKING OF MUSCLE MASS)",
+    "",
+    "",
+    ""
+  ];
+  var powerBottomListArr = [
+    "INCREASED LEAN MUSCLE MASS",
+    "IMPROVED MUSCLE CAPACITY",
+    "DECREASED MUSCLE FATIGUE",
+    "IMPROVED METABOLISM",
+    "BETTER MUSCLE DEFINITION"
+  ];
+
+
+
+
+.power
+  .power__top
+    .container
+
+      .power__top-block
+
+        p.power__top-title!= "FEEL THE POWER"
+        p.power__top-subtitle!= "IN YOUR VEINS"
+
+        p.power__top-text.power__top-text-0!= "Every single aspect of your muscle performance is affected by your blood vessels. From the key nutrients that help improve your muscle performance, to the compounds that allow your muscles to heal, everything goes through your blood vessels. With MassGenix, you are essentially increasing the rate of delivery to your muscles, and things like POWER, ENDURANCE, and PERFORMANCE would follow."
+        p.power__top-text.power__top-text-1!= "MassGenix is the central piece in your supplement regimen that makes everything else – from your diet to your protein powders, better. Imagine what your body can do when your muscles get the nutrients that it needs, at precisely the right time. You would be UNSTOPPABLE."
+
+        .power__top-relative
+          .power__box
+            p.power__box-title!= "WHAT HAPPENS WHEN YOU HAVE"
+            p.power__box-subtitle!= "POOR CIRCULATION?"
+
+            ul.power__box-list
+              -for(var i = 0, len = powerBoxListTitle.length; i < len; i++)
+                li.power__box-list-item
+                  img(src="./img/img-box-list-" + i + "__power.png" srcset="./img/img-box-list-" + i + "__power@2x.png 2x" title="")
+
+                  .power__box-list-text
+                    p.power__box-list-title!= powerBoxListTitle[i]
+                    p.power__box-list-subtitle!= powerBoxListSubTitle[i]
+
+
+  .power__bottom
+    .container
+
+      img(
+        src="./img/img-bottle__power.png" srcset="./img/img-bottle__power@2x.png 2x"
+        alt="" title=""
+      )
+
+      p.power__bottom-desc!= "MASSGENIX is scientifically proven to increase muscle mass through muscle performance. It’s as simple as increasing muscle capacity to increase performance, and subsequently increasing muscle development. Experience your peak performance and use MASSGENIX daily for at least 30-60 days for best results!"
+
+      .power__bottom-relative
+
+        img(
+          class="power__bottom-man"
+          src="./img/img-man__power.png" srcset="./img/img-man__power@2x.png 2x"
+          alt="" title=""
+        )
+
+        ul.power__bottom-list
+          -for(var i = 0, len = powerBottomListArr.length; i < len; i++)
+            .power__bottom-list-wrap
+              span!= powerBottomListArr[i]
+
+        .power__bottom-text
+          svg(height="40px" width="100%" class="power__bottom-text")
+            defs
+              linearGradient(id="gradientText0" x1="0%" y1="0%" x2="0%" y2="100%")
+                stop(offset="0%" stop-color="#C7C7C7")
+                stop(offset="100%" stop-color="#fff")
+            g()
+              text(style="stroke:#000; stroke-width: 7px" x="0" y="34")
+                != "WHAT HAS NEVER BEEN DONE, <tspan>DO IT.</tspan>"
+              text(fill="url(#gradientText0)" x="0" y="34")
+                != "WHAT HAS NEVER BEEN DONE, <tspan style='fill:#ffc300'>DO IT.</tspan>"
+
+          svg(height="40px" width="100%" class="power__bottom-text")
+            defs
+              linearGradient(id="gradientText1" x1="0%" y1="0%" x2="0%" y2="100%")
+                stop(offset="0%" stop-color="#fff")
+                stop(offset="100%" stop-color="#fff")
+            g()
+              text(style="stroke:#000; stroke-width: 7px" x="0" y="34")
+                != "WHAT HAS NEVER BEEN ACHIEVED <tspan>EARN IT.</tspan>"
+              text(fill="url(#gradientText1)" x="0" y="34")
+                != "WHAT HAS NEVER BEEN ACHIEVED <tspan style='fill:#ffc300'>EARN IT.</tspan>"
+
+          svg(height="40px" width="100%" class="power__bottom-text")
+            defs
+              linearGradient(id="gradientText2" x1="0%" y1="0%" x2="0%" y2="100%")
+                stop(offset="0%" stop-color="#fff")
+                stop(offset="100%" stop-color="#fff")
+            g()
+              text(style="stroke:#000; stroke-width: 7px" x="0" y="34")
+                != "WHAT HAS NEVER BEEN BUILT, <tspan>MAKE IT.</tspan>"
+              text(fill="url(#gradientText2)" x="0" y="34")
+                != "WHAT HAS NEVER BEEN BUILT, <tspan style='fill:#ffc300'>MAKE IT.</tspan>"
+
+          svg(height="40px" width="100%" class="power__bottom-text")
+            defs
+              linearGradient(id="gradientText3" x1="0%" y1="0%" x2="0%" y2="100%")
+                stop(offset="0%" stop-color="#fff")
+                stop(offset="100%" stop-color="#C7C7C7")
+            g()
+              text(style="stroke:#000; stroke-width: 7px" x="0" y="34")
+                != "WHAT HAS NEVER BEEN MADE POSSIBLE, <tspan>BE IT.</tspan>"
+              text(fill="url(#gradientText3)" x="0" y="34")
+                != "WHAT HAS NEVER BEEN MADE POSSIBLE, <tspan style='fill:#ffc300'>BE IT.</tspan>"
+
+          .power__bottom-line
+
+          svg(height="40px" width="100%" class="power__bottom-text")
+            defs
+              linearGradient(id="gradientText4" x1="0%" y1="0%" x2="0%" y2="100%")
+                stop(offset="0%" stop-color="#C7C7C7")
+                stop(offset="100%" stop-color="#fff")
+            g()
+              text(style="stroke:#000; stroke-width: 7px" x="0" y="34")
+                != "THE WORLD IS FULL OF LIMITATIONS"
+              text(fill="url(#gradientText4)" x="0" y="34")
+                != "THE WORLD IS FULL OF LIMITATIONS"
+
+          svg(height="60px" width="100%" class="power__bottom-text power__bottom-text--big")
+            defs
+              linearGradient(id="gradientText5" x1="0%" y1="0%" x2="0%" y2="100%")
+                stop(offset="0%" stop-color="#ffc300")
+                stop(offset="100%" stop-color="#bf9200")
+            g()
+              text(fill="url(#gradientText5)" x="0" y="50")
+                != "BE THE ANOMALY"
+
+
+        .power__bottom-banner
+          p!= "GET RIPPED + GET JACKED + NEVER LOOK BACK."
+          p!= "EXPLOSIVE MUSCLE PERFORMANCE"
+          p!= "NOW WITHIN YOUR REACH."
+
+
+        a(href="#" title="" class="power__btn")!= "RUSH MY ORDER"
+
+// POWER :: END
