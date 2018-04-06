@@ -1,6 +1,6 @@
 .banner
-  min-height: 800px
-  padding-bottom: 20px
+  min-height: 790px
+  //padding-bottom: 20px
   background-color: $colorWhite
   background-image: url("../img/img-bg__banner.png")
   background-position: center
@@ -14,11 +14,12 @@
       display: flex
 
     &--left
-      width: 640px
+      width: 600px
       padding-top: 50px
 
     &--right
-      width: calc(100% - 640px)
+      width: calc(100% - 600px)
+
 
   &__title,
   &__subtitle,
@@ -27,26 +28,26 @@
 
     g
       transform: translate(100%)
-
     text
       text-anchor: end
 
+  &__title,
+  &__subtitle
+      text
+        letter-spacing: 7px
+  &__text
+      text
+        letter-spacing: 2px
 
-  //&__title
-  //  font-size: 114px
-  //&__subtitle
-  //  font-size: 80px
-  //&__text
-  //  font-size: 24px
 
   &__img
     max-width: 100%
 
     &-wrap
       text-align: center
-      margin-left: 5px
-      margin-right: 5px
-      margin-bottom: 10px
+      //margin-left: 5px
+      //margin-right: 5px
+      margin-bottom: 7px
 
   &__list
     position: relative
@@ -54,17 +55,17 @@
 
     img
       position: absolute
-      top: -90px
-      right: -110px
+      top: -80px
+      right: -130px
 
     &-item
       display: flex
       align-items: center
       justify-content: flex-start
-      padding-left: 15px
+      padding-left: 23px
       max-width: 460px
       height: 46px
-      margin-bottom: 10px
+      margin-bottom: 9px
       background-color: $colorVenetianRed
       border:
         left: 10px solid $colorWhite
@@ -73,11 +74,14 @@
       transform: skew(-38deg)
 
       &:first-child
-        margin-left: 100px
+        margin-left: 124px
       &:nth-child(2)
-        margin-left: 105px
+        margin-left: 129px
+      &:nth-child(3)
+        margin-left: 5px
+        padding-left: 10px
       &:nth-child(4)
-        margin-left: 150px
+        margin-left: 184px
 
       span
         font-size: 23px
@@ -93,9 +97,9 @@
     flex-direction: column
     align-items: center
     justify-content: center
-    width: calc(100% - (38px + 34px))
+    width: calc(100% - (36px))
     height: 95px
-    margin-left: 38px
+    margin-left: 44px
     background-image: url("../img/img-badge__banner.png")
     background-size: cover
     background-repeat: no-repeat
@@ -134,8 +138,8 @@
 
 
   &__info
-    margin-top: 20px
-    margin-bottom: 30px
+    margin-top: 10px
+    margin-bottom: 10px
     text-align: center
     font-family: 'Rift', sans-serif
     font-weight: 600
@@ -145,15 +149,16 @@
   &__form
     z-index: 5
     position: relative
-    max-width: calc(100% - 30px)
+    max-width: calc(100% - 50px)
     width: 100%
     min-height: 500px
-    margin-left: 30px
+    margin-left: 50px
+    margin-top: 5px
     background-color: $colorWhiteSmoke
-    border: 8px solid $colorNobel
+    border: 5px solid $colorNobel
 
     &-header
-      padding: 10px 15px
+      padding: 7px 10px 10px
       background-color: $colorBlack
       color: $colorWhite
 
@@ -165,14 +170,16 @@
           font-size: 18px
           font-weight: 600
         &:nth-child(2)
-          font-size: 40px
+          margin-bottom: 2px
+          font-size: 36px
           font-weight: 700
         &:nth-child(3)
           font-size: 14px
           font-weight: 600
+          letter-spacing: -0.3px
 
     &-body
-      padding: 17px 25px 30px
+      padding: 17px 20px 25px
 
 
     &-field
@@ -184,15 +191,15 @@
 
       &--left
         color: $colorBlack
-        font-size: 15px
+        font-size: 14px
         font-weight: 600
 
 
       input,
       select
-        width: 180px
-        height: 25px
-        padding-left: 5px
+        width: 170px
+        height: 23px
+        padding: 0 5px 0 9px
         border-radius: 0
         font-size: 11px
         font-weight: 500
@@ -202,10 +209,10 @@
 
     &-btn
       display: block
-      max-width: 270px
+      width: 270px
       height: 64px
       line-height: 62px
-      margin-bottom: 50px
+      margin-bottom: 53px
       margin-left: auto
       margin-right: auto
       border-radius: 11px
@@ -221,7 +228,7 @@
         weight: bold
       color: $colorWhite
       text-align: center
-      +transition(background)
+      letter-spacing: -0.5px
 
     &-img
       &-wrap

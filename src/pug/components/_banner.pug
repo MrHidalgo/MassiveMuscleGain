@@ -30,15 +30,15 @@ mixin formFieldSelect(title, placeholderVal)
   .container
 
     .banner__row.banner__row--text
-      svg(viewBox='0 0 1110 90' xmlns='http://www.w3.org/2000/svg' version='1.1' class="banner__title")
+      svg(viewBox='0 0 1110 105' xmlns='http://www.w3.org/2000/svg' version='1.1' class="banner__title")
         defs
           linearGradient(id="gradientTextTitle" x1="0%" y1="0%" x2="0%" y2="100%")
             stop(offset="0%" stop-color="#C7C7C7")
             stop(offset="100%" stop-color="#fff")
         g()
-          text(style="stroke:#000; stroke-width: 7px" x="0" y="85" font-size="114px")
+          text(style="stroke:#000; stroke-width: 7px" x="0" y="100" font-size="120px")
             != "MASSIVE"
-          text(fill="url(#gradientTextTitle)" x="0" y="85" font-size="114px")
+          text(fill="url(#gradientTextTitle)" x="0" y="100" font-size="120px")
             != "MASSIVE"
 
       svg(viewBox='0 0 1110 65' xmlns='http://www.w3.org/2000/svg' version='1.1' class="banner__subtitle")
@@ -66,8 +66,8 @@ mixin formFieldSelect(title, placeholderVal)
     .banner__row.banner__row--box
       .banner__row--left
         .banner__img-wrap
-          img(src="./img/img-usa__banner.png" srcset="./img/img-usa__banner@2x.png 2x" alt="" title="")
-          img(src="./img/img-guarantee__banner.png" srcset="./img/img-guarantee__banner@2x.png 2x" alt="" title="")
+          img(src="./img/img-usa__banner.png" srcset="./img/img-usa__banner@2x.png 2x" alt="" title="" class="banner__img")
+          img(src="./img/img-guarantee__banner.png" srcset="./img/img-guarantee__banner@2x.png 2x" alt="" title="" class="banner__img")
 
         ul.banner__list
           -for(var i = 0, len = bannerListArr.length; i < len; i++)

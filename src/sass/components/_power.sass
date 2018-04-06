@@ -1,7 +1,7 @@
 .power
   &__top
-    min-height: 660px
-    padding-top: 43px
+    min-height: 667px
+    padding-top: 34px
     background-color: $colorWhite
     background-image: url("../img/img-bg-top__power.png")
     background-position: center
@@ -14,20 +14,18 @@
       flex-direction: column
       align-items: flex-end
       justify-content: flex-end
-
-      +rmin(768)
-
       +rmin(992)
         width: 65%
         margin-left: 35%
       +rmin(1200)
-        width: 60%
-        margin-left: 40%
+        width: 70%
+        margin-left: 30%
 
     &-title
       line-height: 1
       font-family: 'SuiGeneris', sans-serif
       color: $colorNightRider
+      letter-spacing: 0.6px
       +rmin(768)
         font-size: 50px
       +rmin(992)
@@ -38,6 +36,7 @@
     &-subtitle
       line-height: 1
       margin-bottom: 25px
+      margin-top: -7px
       font-family: 'SuiGeneris', sans-serif
       color: $colorNightRider
       +rmin(768)
@@ -52,16 +51,17 @@
       font-size: 14px
       font-weight: 600
       color: $colorBlack
+      line-height: 1.5
       +rmin(768)
         max-width: 60%
       +rmin(992)
-        max-width: 80%
+        max-width: 78%
 
       &-0
         margin-bottom: 30px
 
       &-1
-        margin-bottom: 50px
+        margin-bottom: 47px
 
 
     &-relative
@@ -75,7 +75,7 @@
     top: 0
     width: 100%
     min-height: 480px
-    padding: 20px 10px 0
+    padding: 15px 0 0 13px
     background-color: $colorWhiteSmoke
     border:
       top: 8px solid $colorNobel
@@ -86,7 +86,7 @@
       right: 0
       max-width: 390px
     +rmin(992)
-      left: 0
+      right: 10px
       max-width: 520px
 
     &-line
@@ -94,18 +94,18 @@
       &--right
         z-index: 2
         position: absolute
-        bottom: -36px
+        bottom: -31px
         width: calc(50% + 17px)
         height: 8px
         background-color: $colorNobel
 
       &--left
         left: -11px
-        transform: rotate(15deg)
+        transform: rotate(13deg)
 
       &--right
         right: -11px
-        transform: rotate(-15deg)
+        transform: rotate(-13deg)
 
     &:before,
     &:after
@@ -113,19 +113,19 @@
       position: absolute
 
     &:before
-      bottom: -70px
+      bottom: -60px
       right: -8px
       width: 0
       height: 0
-      border-top: 70px solid #f4f4f4
+      border-top: 60px solid #f4f4f4
       border-right: 260px solid transparent
 
     &:after
-      bottom: -70px
+      bottom: -60px
       left: -8px
       width: 0
       height: 0
-      border-top: 70px solid #f4f4f4
+      border-top: 60px solid #f4f4f4
       border-left: 260px solid transparent
 
 
@@ -159,7 +159,7 @@
       &-item
         display: flex
         align-items: center
-        margin-bottom: 5px
+        margin-bottom: 3px
         font-style: italic
         color: $colorNightRider
         font-family: 'Rift', sans-serif
@@ -172,10 +172,11 @@
           font-size: 36px
 
         img
-          margin-right: 10px
+          margin-right: 6px
 
       p
         line-height: 1
+        letter-spacing: -0.7px
 
       &-subtitle
         font-size: 16px
@@ -191,15 +192,15 @@
 
 
   &__bottom
-    min-height: 1720px
+    min-height: 1730px
     padding-top: 20px
     background-image: url("../img/img-bg-bottom__power.png")
     background-position: center
     background-size: cover
     background-repeat: no-repeat
     background-attachment: fixed
-    +rmin(768)
-      min-height: 1520px
+    //+rmin(768)
+    //  min-height: 1520px
 
     img
       display: block
@@ -214,11 +215,12 @@
 
     &-desc
       margin-bottom: 60px
+      line-height: 1.7
       +rmin(768)
         width: 100%
         font-size: 14px
       +rmin(992)
-        width: 53%
+        width: 60%
         font-size: 15px
       +rmin(1200)
         font-size: 17px
@@ -234,7 +236,7 @@
     &-man
       z-index: 4
       position: absolute
-      top: -290px
+      top: -305px
       max-width: 100%
       +rmin(768)
         display: none !important
@@ -242,20 +244,20 @@
         display: block !important
         right: -100px
       +rmin(1200)
-        right: 0
+        right: -90px
 
 
     &-list
       padding-left: 30px
-      margin-bottom: 55px
+      margin-bottom: 50px
       +rmin(768)
-        padding-left: 0
+        padding-left: 45px
 
       &-wrap
         display: flex
         align-items: center
         justify-content: center
-        height: 46px
+        height: 45px
         margin-bottom: 10px
         background-color: $colorVenetianRed
         border:
@@ -267,7 +269,7 @@
         +rmin(992)
           max-width: 420px
         +rmin(1200)
-          max-width: 520px
+          max-width: 440px
 
 
         span
@@ -286,28 +288,27 @@
     &-text
       z-index: 6
       position: relative
-      margin-bottom: 10px
+      margin-bottom: 25px
       text-align: center
       font-family: 'SuiGeneris', sans-serif
 
-      &:nth-child(4)
+      &.mb
         margin-bottom: 0
-
 
       &--big
         +rmin(768)
-          margin-bottom: 28px
+          //margin-bottom: 28px
         +rmin(992)
-          margin-bottom: 40px
+          //margin-bottom: 40px
         +rmin(1200)
-          margin-bottom: 50px
-
+          margin-bottom: 18px
 
       svg
         g
           transform: translate(50%)
         text
           text-anchor: middle
+          letter-spacing: 3.3px
 
     &-line
       max-width: 820px
@@ -324,8 +325,8 @@
         margin-bottom: 30px
         font-size: 60px
       +rmin(1200)
-        margin-top: 40px
-        margin-bottom: 40px
+        margin-top: 35px
+        margin-bottom: 41px
         font-size: 70px
 
 
@@ -335,7 +336,7 @@
       align-items: center
       justify-content: center
       width: 100%
-      min-height: 190px
+      min-height: 193px
       background-image: url("../img/img-bg-bottom-yellow__power.png")
       background-repeat: no-repeat
       background-size: cover
@@ -394,3 +395,6 @@
       weight: bold
     color: $colorWhite
     text-align: center
+
+    //&:hover
+

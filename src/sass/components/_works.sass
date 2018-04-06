@@ -1,6 +1,6 @@
 .works
-  min-height: 818px
-  padding-top: 35px
+  min-height: 815px
+  padding-top: 23px
   background-image: url("../img/img-bg__works.png")
   background-position: center
   background-size: cover
@@ -15,11 +15,13 @@
 
   &__title
     font-family: 'SuiGeneris', sans-serif
+    letter-spacing: 5px
 
 
   &__subtitle
+    margin-bottom: 10px
     font-family: 'SuiGeneris', sans-serif
-    margin-bottom: 30px
+    letter-spacing: 3.6px
 
 
   &__text
@@ -30,24 +32,25 @@
     font-weight: 500
     font-style: italic
     color: $colorGoldenPoppy
+    line-height: 1.2
+    letter-spacing: -0.5px
     +rmin(768)
       font-size: 45px
-      padding-right: 65px
+      padding-right: 71px
     +rmin(992)
       font-size: 49px
-      padding-right: 75px
+      padding-right: 81px
     +rmin(1200)
       font-size: 53px
-      padding-right: 85px
+      padding-right: 91px
 
 
   &__block
     display: flex
-    margin-top: 30px
+    margin-top: 27px
 
     &:last-child
-      margin-bottom: 40px
-
+      margin-bottom: 15px
 
     &-img-wrap
       margin-right: 10px
@@ -68,6 +71,7 @@
       p
         font-weight: 600
         font-size: 18px
+        line-height: 1.2
         +rmin(768)
           font-size: 14px
         +rmin(992)
@@ -81,7 +85,7 @@
     +rmin(768)
       max-width: 50%
     +rmin(992)
-      max-width: 530px
+      max-width: 520px
 
 
   &__right
@@ -89,6 +93,7 @@
       display: block
       max-width: 100%
       height: auto
+      margin-top: -8px
 
 
     a
@@ -96,7 +101,7 @@
       max-width: 270px
       height: 64px
       line-height: 62px
-      margin-top: 15px
+      margin-top: 18px
       margin-left: auto
       margin-right: auto
       border-radius: 11px
@@ -111,3 +116,4 @@
         weight: bold
       color: $colorWhite
       text-align: center
+      letter-spacing: -0.5px
