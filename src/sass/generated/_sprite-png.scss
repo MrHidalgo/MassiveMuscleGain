@@ -1,11 +1,11 @@
 $sprite: (
-	logo: (
+	block: (
 		offset-x: 0px,
 		offset-y: 0px,
-		width: 300px,
-		height: 70px,
-		total-width: 300px,
-		total-height: 70px,
+		width: 22px,
+		height: 22px,
+		total-width: 22px,
+		total-height: 22px,
 		image: '../img/sprite.png'
 	),
 );
@@ -64,6 +64,6 @@ $sprite: (
 
 
 
-	.icon-logo {
-		@include sprite(logo)
+	.icon-block {
+		@include sprite(block)
 	}

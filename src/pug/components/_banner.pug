@@ -1,0 +1,115 @@
+// BANNER :: START
+-
+  var bannerListArr = [
+    "IMPROVES MUSCLE STRENGTH",
+    "MAXIMIZES MUSCLE STAMINA",
+    "INCREASES MUSCLE PERFORMANCE THRESHOLD",
+    "SPEEDS UP RECOVERY"
+  ];
+
+
+mixin formFieldInput(title, inputType, placeholderVal)
+  .banner__form-field
+    .banner__form-field--left
+      != title
+    .banner__form-field--right
+      input(type!= inputType placeholder!= placeholderVal)
+
+mixin formFieldSelect(title, placeholderVal)
+  .banner__form-field.banner__form-field--select
+    .banner__form-field--left
+      != title
+    .banner__form-field--right
+      select()
+        option(value!= placeholderVal disabled selected)
+        -for(var i = 0; i < 10; i++)
+          option(value="Some value-" + i)!= "Some value-" + i
+
+
+.banner
+  .container
+
+    .banner__row.banner__row--text
+      svg(height="100px" width="100%" class="banner__title")
+        defs
+          linearGradient(id="gradientTextTitle" x1="0%" y1="0%" x2="0%" y2="100%")
+            stop(offset="0%" stop-color="#C7C7C7")
+            stop(offset="100%" stop-color="#fff")
+        g()
+          text(style="stroke:#000; stroke-width: 7px" x="0" y="90")
+            != "MASSIVE"
+          text(fill="url(#gradientTextTitle)" x="0" y="90")
+            != "MASSIVE"
+
+      svg(height="70px" width="100%" class="banner__subtitle")
+        defs
+          linearGradient(id="gradientTextSubtitle" x1="0%" y1="0%" x2="0%" y2="100%")
+            stop(offset="0%" stop-color="#fff")
+            stop(offset="100%" stop-color="#C7C7C7")
+        g()
+          text(style="stroke:#000; stroke-width: 7px" x="0" y="60")
+            != "MUSCLE GAIN"
+          text(fill="url(#gradientTextSubtitle)" x="0" y="60")
+            != "MUSCLE GAIN"
+
+      svg(height="24px" width="100%" class="banner__text")
+        defs
+          linearGradient(id="gradientTextText" x1="0%" y1="0%" x2="0%" y2="100%")
+            stop(offset="0%" stop-color="#C7C7C7")
+            stop(offset="100%" stop-color="#C7C7C7")
+        g()
+          text(style="stroke:#000; stroke-width: 7px" x="0" y="20")
+            != "GET JACKED. GET RIPPED. NEVER LOOK BACK"
+          text(fill="url(#gradientTextText)" x="0" y="20")
+            != "GET JACKED. GET RIPPED. NEVER LOOK BACK"
+
+    .banner__row.banner__row--box
+      .banner__row--left
+        .banner__img-wrap
+          img(src="./img/img-usa__banner.png" srcset="./img/img-usa__banner@2x.png 2x" alt="" title="")
+          img(src="./img/img-guarantee__banner.png" srcset="./img/img-guarantee__banner@2x.png 2x" alt="" title="")
+
+        ul.banner__list
+          -for(var i = 0, len = bannerListArr.length; i < len; i++)
+            .banner__list-item
+              span!= bannerListArr[i]
+
+          img(src="./img/img-bottle__banner.png" srcset="./img/img-bottle__banner@2x.png 2x" alt="" title="")
+
+        .banner__badge
+          p!= "HURRY! ONLY XXX TRIALS ACCEPTED DAILY!"
+          span!= "RESERVE YOUR TRIAL SPOT NOW"
+
+        p.banner__info!= "ONLY 1 TRIAL PER CUSTOMER  •  RESERVE YOUR SLOTS NOW!"
+
+      .banner__row--right
+
+        form.banner__form
+          .banner__form-header
+            p!= "TELL US WHERE TO SEND YOUR"
+            p!= "SAMPLE BOTTLE"
+            p!= "ENTER YOUR SHIPPING INFORMATION"
+
+          .banner__form-body
+            +formFieldInput("First Name", "text", "First Name")
+            +formFieldInput("Last Name", "text", "Last Name")
+            +formFieldInput("Address", "text", "Address")
+            +formFieldInput("City", "text", "City")
+            +formFieldSelect("State", "Select State")
+            +formFieldInput("ZIP", "text", "Zip Code")
+            +formFieldInput("Phone", "text", "Phone Number")
+            +formFieldInput("Email Address", "email", "Email")
+
+          .banner__form-footer
+            button(type="button" class="banner__form-btn")!= "RUSH MY ORDER"
+
+            .banner__form-img-wrap
+              -for(var i = 0; i < 3; i++)
+                img(src="./img/img-secure-" + i + "__form.png" srcset="./img/img-secure-" + i + "__form@2x.png 2x" alt="" title="" class="banner__form-img")
+
+            .banner__form-info
+              p
+                i.icon-block
+                span!= "This is a 128-Bit Secure SSL Connection"
+
+// BANNER :: END
