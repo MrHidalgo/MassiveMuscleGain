@@ -1,0 +1,126 @@
+.works
+  min-height: 818px
+  padding-top: 35px
+  background-image: url("../img/img-bg__works.png")
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  background-attachment: fixed
+
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+
+
+  &__title
+    font-family: 'SuiGeneris', sans-serif
+    +rmin(768)
+      font-size: 50px
+    +rmin(992)
+      font-size: 55px
+    +rmin(1200)
+      font-size: 60px
+
+
+  &__subtitle
+    font-family: 'SuiGeneris', sans-serif
+    margin-bottom: 30px
+    +rmin(768)
+      font-size: 30px
+    +rmin(992)
+      font-size: 34px
+    +rmin(1200)
+      font-size: 38px
+
+
+  &__text
+    display: table
+    padding-left: 5px
+    border-bottom: 2px solid
+    font-family: 'Rift', sans-serif
+    font-weight: 500
+    font-style: italic
+    color: $colorGoldenPoppy
+    +rmin(768)
+      font-size: 45px
+      padding-right: 65px
+    +rmin(992)
+      font-size: 49px
+      padding-right: 75px
+    +rmin(1200)
+      font-size: 53px
+      padding-right: 85px
+
+
+
+  &__block
+    display: flex
+    margin-top: 30px
+
+    &:last-child
+      margin-bottom: 40px
+
+
+    &-img-wrap
+      margin-right: 10px
+
+
+    &-text-wrap
+      h3
+        font-family: "Rift", sans-serif
+        font-weight: 600
+        color: $colorGoldenPoppy
+        +rmin(768)
+          font-size: 24px
+        +rmin(992)
+          font-size: 28px
+        +rmin(1200)
+          font-size: 32px
+
+      p
+        font-weight: 600
+        font-size: 18px
+        +rmin(768)
+          font-size: 14px
+        +rmin(992)
+          font-size: 16px
+        +rmin(1200)
+          font-size: 18px
+
+
+  &__left
+    width: 100%
+    +rmin(768)
+      max-width: 50%
+    +rmin(992)
+      max-width: 530px
+
+
+  &__right
+    img
+      display: block
+      max-width: 100%
+      height: auto
+
+
+    a
+      display: block
+      max-width: 270px
+      height: 64px
+      line-height: 62px
+      margin-top: 15px
+      margin-left: auto
+      margin-right: auto
+      border-radius: 11px
+      border: 1px solid $colorWhite
+      background-image: -moz-linear-gradient( 90deg, rgb(134,27,27) 0%, rgb(181,41,42) 44%, rgb(238,65,66) 80%, rgb(195,46,47) 100%)
+      background-image: -webkit-linear-gradient( 90deg, rgb(134,27,27) 0%, rgb(181,41,42) 44%, rgb(238,65,66) 80%, rgb(195,46,47) 100%)
+      background-image: -ms-linear-gradient( 90deg, rgb(134,27,27) 0%, rgb(181,41,42) 44%, rgb(238,65,66) 80%, rgb(195,46,47) 100%)
+      text-shadow: 0 1px 0 rgba($colorBlack, 0.55)
+      font:
+        family: 'Rift'
+        size: 44px
+        weight: bold
+      color: $colorWhite
+      text-align: center

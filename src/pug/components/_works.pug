@@ -1,0 +1,88 @@
+// WORKS :: START
+-
+  var worksArrImage = [
+    "./img/img-block-0__works.png",
+    "./img/img-block-1__works.png",
+    "./img/img-block-2__works.png"
+  ];
+  var worksArrImage2x = [
+    "./img/img-block-0__works@2x.png 2x",
+    "./img/img-block-1__works@2x.png 2x",
+    "./img/img-block-2__works@2x.png 2x"
+  ];
+  var worksArrTitle = [
+    "STEP ONE",
+    "STEP TWO",
+    "STEP THREE"
+  ];
+  var worksArrText = [
+    "MassGenix improves delivery of key nutrients to increase muscle performance, speed, and explosiveness",
+    "MassGenix reduces muscle fatigue by inhibiting the effects of lactic acid in the muscles",
+    "MassGenix speeds up muscle recovery by improving the delivery of key nutrients in muscle development"
+  ];
+
+.works
+  .container
+
+
+    svg(height="60px" width="100%" class="works__title")
+      defs
+        linearGradient(id="gradientTextTitle" x1="0%" y1="0%" x2="0%" y2="100%")
+          stop(offset="0%" stop-color="#C7C7C7")
+          stop(offset="100%" stop-color="#fff")
+      g()
+        text(
+          style="stroke:#000; stroke-width: 10px"
+          x="0" y="50"
+          )!= "MASSIVE MUSCLE GAIN"
+        text(
+          fill="url(#gradientTextTitle)"
+          x="0" y="50"
+          )!= "MASSIVE MUSCLE GAIN"
+
+
+    svg(height="48px" width="100%" class="works__subtitle")
+      defs
+        linearGradient(id="gradientTextSubtitle" x1="0%" y1="0%" x2="0%" y2="100%")
+          stop(offset="0%" stop-color="#fff")
+          stop(offset="100%" stop-color="#C7C7C7")
+      g()
+        text(
+          style="stroke:#000; stroke-width: 10px"
+          x="0" y="38"
+        )!= "MAXIMUM WORKOUT PERFORMANCE"
+        text(
+          fill="url(#gradientTextSubtitle)"
+          x="0" y="38"
+          )!= "MAXIMUM WORKOUT PERFORMANCE"
+
+
+    p.works__text!= "HOW MASSGENIX WORKS"
+
+
+    .works__wrapper
+      .works__left
+         -for(var i = 0, len = worksArrTitle.length; i < len; i++)
+          .works__block
+            .works__block-img-wrap
+              img(
+                src!= worksArrImage[i] srcset!= worksArrImage2x[i]
+                alt="" title=""
+              )
+            .works__block-text-wrap
+              h3!= worksArrTitle[i]
+              p!= worksArrText[i]
+
+
+
+
+      .works__right
+        img(
+          src="./img/img-bottle__works.png" srcset="./img/img-bottle__works@2x.png 2x"
+          alt="" title=""
+        )
+
+        a(href="#" title="")!= "RUSH MY ORDER"
+
+        
+// WORKS :: END
