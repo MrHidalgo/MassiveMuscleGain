@@ -14,8 +14,15 @@
       flex-direction: column
       align-items: flex-end
       justify-content: flex-end
-      width: 60%
-      margin-left: 40%
+
+      +rmin(768)
+
+      +rmin(992)
+        width: 65%
+        margin-left: 35%
+      +rmin(1200)
+        width: 60%
+        margin-left: 40%
 
     &-title
       line-height: 1
@@ -45,7 +52,10 @@
       font-size: 14px
       font-weight: 600
       color: $colorBlack
-      max-width: 80%
+      +rmin(768)
+        max-width: 60%
+      +rmin(992)
+        max-width: 80%
 
       &-0
         margin-bottom: 30px
@@ -63,13 +73,18 @@
     z-index: 5
     position: absolute
     top: 0
-    left: 0
     width: 100%
-    max-width: 520px
     min-height: 500px
     padding: 20px 10px 0
     background-color: $colorWhiteSmoke
     border: 8px solid $colorNobel
+    +rmin(768)
+      left: auto
+      right: 0
+      max-width: 390px
+    +rmin(992)
+      left: 0
+      max-width: 520px
 
     &-title,
     &-subtitle
@@ -79,22 +94,39 @@
       color: $colorNightRider
 
     &-title
-      font-size: 24px
+      +rmin(768)
+        font-size: 16px
+      +rmin(992)
+        font-size: 20px
+      +rmin(1200)
+        font-size: 24px
+
 
     &-subtitle
-      font-size: 36px
       margin-bottom: 30px
+      +rmin(768)
+        font-size: 28px
+      +rmin(992)
+        font-size: 32px
+      +rmin(1200)
+        font-size: 36px
+
 
     &-list
       &-item
         display: flex
         align-items: center
         margin-bottom: 5px
-        font-size: 36px
         font-style: italic
         color: $colorNightRider
         font-family: 'Rift', sans-serif
         font-weight: 600
+        +rmin(768)
+          font-size: 22px
+        +rmin(992)
+          font-size: 30px
+        +rmin(1200)
+          font-size: 36px
 
         img
           margin-right: 10px
@@ -107,6 +139,12 @@
         font-family: 'Open Sans', sans-serif
         font-weight: 600
         color: $colorNobelLight
+        +rmin(768)
+          font-size: 10px
+        +rmin(992)
+          font-size: 12px
+        +rmin(1200)
+          font-size: 16px
 
 
   &__bottom
@@ -117,18 +155,29 @@
     background-size: cover
     background-repeat: no-repeat
     background-attachment: fixed
+    +rmin(768)
+      min-height: 1520px
 
     img
       display: block
       max-width: 100%
       height: auto
       margin-bottom: 10px
+      +rmin(768)
+        margin-left: -100px
 
 
     &-desc
-      font-size: 17px
       width: 53%
       margin-bottom: 60px
+      +rmin(768)
+        width: 100%
+        font-size: 14px
+      +rmin(992)
+        font-size: 15px
+      +rmin(1200)
+        font-size: 17px
+
 
 
     &-relative
@@ -141,19 +190,26 @@
       z-index: 4
       position: absolute
       top: -290px
-      right: 0
       max-width: 100%
+      +rmin(768)
+        display: none !important
+      +rmin(992)
+        display: block !important
+        right: -100px
+      +rmin(1200)
+        right: 0
 
 
     &-list
       padding-left: 30px
       margin-bottom: 55px
+      +rmin(768)
+        padding-left: 0
 
       &-wrap
         display: flex
         align-items: center
         justify-content: center
-        max-width: 500px
         height: 46px
         margin-bottom: 10px
         background-color: $colorVenetianRed
@@ -161,13 +217,25 @@
           left: 10px solid $colorWhite
           right: 10px solid $colorWhite
         transform: skew(-38deg)
+        +rmin(768)
+          max-width: 100%
+        +rmin(992)
+          max-width: 420px
+        +rmin(1200)
+          max-width: 500px
+
 
         span
-          font-size: 23px
           font-family: 'Rift', sans-serif
           font-weight: bold
           font-style: italic
           transform: skew(38deg)
+          +rmin(768)
+            font-size: 19px
+          +rmin(992)
+            font-size: 21px
+          +rmin(1200)
+            font-size: 23px
 
 
     &-text
@@ -175,11 +243,23 @@
       z-index: 6
       text-align: center
       font-family: 'SuiGeneris', sans-serif
-      font-size: 34px
+      +rmin(768)
+        font-size: 22px
+      +rmin(992)
+        font-size: 28px
+      +rmin(1200)
+        font-size: 34px
 
       &--big
-        font-size: 70px
-        margin-bottom: 50px
+        +rmin(768)
+          margin-bottom: 28px
+          font-size: 50px
+        +rmin(992)
+          margin-bottom: 40px
+          font-size: 60px
+        +rmin(1200)
+          margin-bottom: 50px
+          font-size: 70px
 
       svg
 
@@ -192,11 +272,21 @@
     &-line
       max-width: 820px
       height: 2px
-      margin-top: 40px
-      margin-bottom: 40px
       margin-left: auto
       margin-right: auto
       background-color: $colorWhite
+      +rmin(768)
+        margin-top: 20px
+        margin-bottom: 20px
+        font-size: 50px
+      +rmin(992)
+        margin-top: 30px
+        margin-bottom: 30px
+        font-size: 60px
+      +rmin(1200)
+        margin-top: 40px
+        margin-bottom: 40px
+        font-size: 70px
 
 
     &-banner
@@ -217,16 +307,31 @@
         line-height: 1
 
         &:first-child
-          font-size: 55px
           font-family: 'Rift', sans-serif
           font-weight: 500
+          +rmin(768)
+            font-size: 40px
+          +rmin(992)
+            font-size: 50px
+          +rmin(1200)
+            font-size: 55px
         &:nth-child(2)
-          font-size: 37px
           font-family: 'SuiGeneris', sans-serif
+          +rmin(768)
+            font-size: 29px
+          +rmin(992)
+            font-size: 33px
+          +rmin(1200)
+            font-size: 37px
         &:last-child
-          font-size: 53px
           font-family: 'Rift', sans-serif
           font-weight: 500
+          +rmin(768)
+            font-size: 38px
+          +rmin(992)
+            font-size: 48px
+          +rmin(1200)
+            font-size: 53px
 
   &__btn
     display: block
