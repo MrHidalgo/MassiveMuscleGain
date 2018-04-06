@@ -14,6 +14,8 @@
       flex-direction: column
       align-items: flex-end
       justify-content: flex-end
+      +r(767)
+        width: 100%
       +rmin(992)
         width: 65%
         margin-left: 35%
@@ -26,6 +28,10 @@
       font-family: 'SuiGeneris', sans-serif
       color: $colorNightRider
       letter-spacing: 0.6px
+      +r(575)
+        font-size: 35px
+      +r(767)
+        font-size: 45px
       +rmin(768)
         font-size: 50px
       +rmin(992)
@@ -39,6 +45,10 @@
       margin-top: -7px
       font-family: 'SuiGeneris', sans-serif
       color: $colorNightRider
+      +r(575)
+        font-size: 28px
+      +r(767)
+        font-size: 34px
       +rmin(768)
         font-size: 44px
       +rmin(992)
@@ -68,12 +78,14 @@
       position: relative
       width: 80%
       margin-left: 20%
+      +r(767)
+        width: 100%
+        margin-left: 0
 
   &__box
     z-index: 5
     position: absolute
     top: 0
-    width: 100%
     min-height: 480px
     padding: 15px 0 0 13px
     background-color: $colorWhiteSmoke
@@ -81,15 +93,23 @@
       top: 8px solid $colorNobel
       left: 8px solid $colorNobel
       right: 8px solid $colorNobel
-    +rmin(768)
-      left: auto
+    +r(767)
+      position: static
       right: 0
-      max-width: 390px
+      width: 100%
+      margin-bottom: 30px
+      border:
+        bottom: 8px solid $colorNobel
+    +rmin(768)
+      right: 0
+      width: 430px
     +rmin(992)
       right: 10px
-      max-width: 520px
+      width: 520px
 
     &-line
+      +r(767)
+        display: none
       &--left,
       &--right
         z-index: 2
@@ -102,15 +122,21 @@
       &--left
         left: -11px
         transform: rotate(13deg)
+        +r(991)
+          transform: rotate(16deg)
 
       &--right
         right: -11px
         transform: rotate(-13deg)
+        +r(991)
+          transform: rotate(-16deg)
 
     &:before,
     &:after
       content: ""
       position: absolute
+      +r(767)
+        display: none
 
     &:before
       bottom: -60px
@@ -119,6 +145,8 @@
       height: 0
       border-top: 60px solid #f4f4f4
       border-right: 260px solid transparent
+      +r(991)
+        border-right-width: 215px
 
     &:after
       bottom: -60px
@@ -127,6 +155,8 @@
       height: 0
       border-top: 60px solid #f4f4f4
       border-left: 260px solid transparent
+      +r(991)
+        border-left-width: 215px
 
 
     &-title,
@@ -164,6 +194,10 @@
         color: $colorNightRider
         font-family: 'Rift', sans-serif
         font-weight: 600
+        +r(575)
+          flex-direction: column
+          margin-bottom: 10px
+          font-size: 18px
         +rmin(768)
           font-size: 22px
         +rmin(992)
@@ -173,6 +207,8 @@
 
         img
           margin-right: 6px
+          +r(575)
+            margin-right: 0
 
       p
         line-height: 1
@@ -183,6 +219,8 @@
         font-family: 'Open Sans', sans-serif
         font-weight: 600
         color: $colorNobelLight
+        +r(575)
+          font-size: 10px
         +rmin(768)
           font-size: 10px
         +rmin(992)
@@ -192,15 +230,16 @@
 
 
   &__bottom
-    min-height: 1730px
     padding-top: 20px
     background-image: url("../img/img-bg-bottom__power.png")
     background-position: center
     background-size: cover
     background-repeat: no-repeat
     background-attachment: fixed
-    //+rmin(768)
-    //  min-height: 1520px
+    +rmin(768)
+      min-height: 1530px
+    +rmin(992)
+      min-height: 1730px
 
     img
       display: block
@@ -208,8 +247,8 @@
       height: auto
       margin-bottom: 10px
       +rmin(768)
-        margin-left: -100px
-      +rmin(768)
+        margin-left: -60px
+      +rmin(992)
         margin-left: 0
 
 
@@ -226,7 +265,6 @@
         font-size: 17px
 
 
-
     &-relative
       position: relative
       width: 100%
@@ -238,6 +276,8 @@
       position: absolute
       top: -305px
       max-width: 100%
+      +r(767)
+        display: none !important
       +rmin(768)
         display: none !important
       +rmin(992)
@@ -250,7 +290,13 @@
     &-list
       padding-left: 30px
       margin-bottom: 50px
+      +r(767)
+        padding-left: 15px
+        padding-right: 15px
       +rmin(768)
+        padding-left: 15px
+        padding-right: 15px
+      +rmin(992)
         padding-left: 45px
 
       &-wrap
@@ -277,6 +323,8 @@
           font-weight: bold
           font-style: italic
           transform: skew(38deg)
+          +r(767)
+            font-size: 16px
           +rmin(768)
             font-size: 19px
           +rmin(992)
@@ -296,12 +344,7 @@
         margin-bottom: 0
 
       &--big
-        +rmin(768)
-          //margin-bottom: 28px
-        +rmin(992)
-          //margin-bottom: 40px
-        +rmin(1200)
-          margin-bottom: 18px
+        margin-bottom: 18px
 
       svg
         g
@@ -316,18 +359,22 @@
       margin-left: auto
       margin-right: auto
       background-color: $colorWhite
+      +r(767)
+        margin-top: 15px
+        margin-bottom: 15px
+        //font-size: 30px
       +rmin(768)
         margin-top: 20px
         margin-bottom: 20px
-        font-size: 50px
+        //font-size: 50px
       +rmin(992)
         margin-top: 30px
         margin-bottom: 30px
-        font-size: 60px
+        //font-size: 60px
       +rmin(1200)
         margin-top: 35px
         margin-bottom: 41px
-        font-size: 70px
+        //font-size: 70px
 
 
     &-banner
@@ -350,6 +397,8 @@
         &:first-child
           font-family: 'Rift', sans-serif
           font-weight: 500
+          +r(767)
+            font-size: 30px
           +rmin(768)
             font-size: 40px
           +rmin(992)
@@ -358,6 +407,8 @@
             font-size: 55px
         &:nth-child(2)
           font-family: 'SuiGeneris', sans-serif
+          +r(767)
+            font-size: 22px
           +rmin(768)
             font-size: 29px
           +rmin(992)
@@ -367,6 +418,8 @@
         &:last-child
           font-family: 'Rift', sans-serif
           font-weight: 500
+          +r(767)
+            font-size: 28px
           +rmin(768)
             font-size: 38px
           +rmin(992)

@@ -6,11 +6,15 @@
   background-size: cover
   background-repeat: no-repeat
   background-attachment: fixed
+  +r(767)
+    padding-bottom: 30px
 
 
   &__wrapper
     display: flex
     justify-content: space-between
+    +r(767)
+      flex-direction: column
 
 
   &__title
@@ -34,6 +38,9 @@
     color: $colorGoldenPoppy
     line-height: 1.2
     letter-spacing: -0.5px
+    +r(767)
+      font-size: 25px
+      padding-right: 35px
     +rmin(768)
       font-size: 45px
       padding-right: 71px
@@ -48,12 +55,19 @@
   &__block
     display: flex
     margin-top: 27px
+    +r(767)
+      flex-direction: column
+      align-items: center
 
     &:last-child
       margin-bottom: 15px
+      +r(767)
+        margin-bottom: 30px
 
     &-img-wrap
       margin-right: 10px
+      +r(767)
+        margin-right: 0
 
 
     &-text-wrap
@@ -94,7 +108,9 @@
       max-width: 100%
       height: auto
       margin-top: -8px
-
+      +r(767)
+        margin-left: auto
+        margin-right: auto
 
     a
       display: block
